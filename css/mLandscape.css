@@ -1,0 +1,7 @@
+@media screen and (orientation: landscape) and (min-aspect-ratio:1/2){
+    /* .con1 */
+    .con1-video > video{
+        width:100%;
+        height:auto;
+    }   
+}
