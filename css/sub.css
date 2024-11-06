@@ -63,8 +63,8 @@ body{-webkit-text-size-adjust: none;
     width:50vw;
     padding:0 0 0 290rem;
     box-sizing:border-box;
-    background:url(../img/rnb-bg.png);
-    background-size:1000rem;
+    background:#8b6f4b url(../img/rnb-bg.png) no-repeat;
+    background-size:500rem;
 }
 .rnb-close-btn{
     position:absolute;

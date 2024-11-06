@@ -1,9 +1,5 @@
 @media screen and (max-width:767px){
 
-
-
-
-    *{}
     .only-web{
         display:none;
     }
@@ -42,7 +38,8 @@
 
     /* rnb */
     .rnb-inner{
-        padding-left:14%
+        background-size:100%;
+        padding-left:14%;
     }
     .rnb-close-btn{
         left:auto;
