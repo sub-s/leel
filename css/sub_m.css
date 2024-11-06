@@ -4,119 +4,214 @@
 
 
 
-/* head */
-.sub-header{
-    padding:0 40rem;
-}
-.sub-header > .l > a > img{
-    width:165rem;
-    height:80rem;
+    /* head */
+    .sub-header{
+        padding:0 40rem;
+    }
+    .sub-header > .l > a > img{
+        width:165rem;
+        height:80rem;
 
-}
+    }
 
-/* wrap */
-.sub-wrapper{
-    min-width:auto;
-    /*border: 1px solid red;*/
-}
-
-
+    /* wrap */
+    .sub-wrapper{
+        min-width:auto;
+        /*border: 1px solid red;*/
+    }
 
 
 
-/******* 서브 3 ************/
-.contact-box .txt-box .img1 {
-    width: 117rem;
-    height: 58rem;
-    margin: 20rem auto 20rem;
-}
-
-.contact-box .txt-box .img1 img {height: 100%;}
-.contact-box .txt-box .txt {
-    font-size: 15rem;
-}
 
 
-.contact-box .map-area .inner {
-    display: block;
-    width: auto;
-    padding: 0 30rem;
+    /******* 서브 3 ************/
+    .contact-box .txt-box .img1 {
+        width: 117rem;
+        height: 58rem;
+        margin: 20rem auto 20rem;
+    }
 
-}
-.contact-box .map-area .inner .item {
-    padding-top: 20rem;
-    padding-bottom: 0;
-}
-.contact-box .map-area .inner .item:first-of-type {
-    border-right: none;
-    border-bottom: 1rem solid #333;
-    padding-right: 0;
-    padding-bottom: 40rem;
-}
-
-.contact-box .map-area .item .map {
-    position: relative;
-    width: 100%;
-    height: auto;
-}
-.contact-box .map-area .item .map img {
-    width: 100%;
-}
-.contact-box .map-area .item .map:hover img {
-    opacity: 0;
-}
-.contact-box .map-area .item .map::before {
-    background-size: 100% auto;
-}
-
-.contact-box .map-area .item .map.map2::before {
-    background-size: 100% auto;
-}
+    .contact-box .txt-box .img1 img {height: 100%;}
+    .contact-box .txt-box .txt {
+        font-size: 15rem;
+    }
 
 
-.contact-box .map-area .inner .tit {
-    font-size: 15rem;
-}
+    .contact-box .map-area .inner {
+        display: block;
+        width: auto;
+        padding: 0 30rem;
 
-.contact-box .map-area .inner .address {
-    font-family: 'SUIT';
-    font-weight: 300;
-    color:#dedede;
-    font-size: 11rem;
-}
+    }
+    .contact-box .map-area .inner .item {
+        padding-top: 20rem;
+        padding-bottom: 0;
+    }
+    .contact-box .map-area .inner .item:first-of-type {
+        border-right: none;
+        border-bottom: 1rem solid #333;
+        padding-right: 0;
+        padding-bottom: 40rem;
+    }
 
-.contact-box .map-area .btn-area {
-    display: flex;
-    justify-content: center;
-    width: auto;
-}
+    .contact-box .map-area .item .map {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    .contact-box .map-area .item .map img {
+        width: 100%;
+    }
+    .contact-box .map-area .item .map:hover img {
+        opacity: 0;
+    }
+    .contact-box .map-area .item .map::before {
+        background-size: 100% auto;
+    }
 
-.contact-box .map-area .btn-area:has(.btn:nth-child(2)) {
-    justify-content: center;
-}
-
-.contact-box .map-area .btn-area:has(.btn:nth-child(1)):not(:has(.btn:nth-child(2))) {
-    justify-content: flex-end;
-}
-
-.contact-box .map-area .btn-area .btn {
-    justify-content: center;
-    width: 90rem;
-    font-size: 12rem;
-    background: #8b6f4b;
-    white-space: nowrap;
-}
-.contact-box .map-area .btn-area .btn + .btn {
-    margin-left: 20rem;
-}
-.contact-box .map-area .btn-area .btn .icon {
-    display: inline-flex;
-    background: url(../img/sub/icon-arrow.png) no-repeat;
-    background-size: 18rem 13rem;
-    width: 18rem;
-    height: 13rem;
-    margin-left: 10rem;
-}
+    .contact-box .map-area .item .map.map2::before {
+        background-size: 100% auto;
+    }
 
 
+    .contact-box .map-area .inner .tit {
+        font-size: 15rem;
+    }
+
+    .contact-box .map-area .inner .address {
+        font-family: 'SUIT';
+        font-weight: 300;
+        color:#dedede;
+        font-size: 11rem;
+    }
+
+    .contact-box .map-area .btn-area {
+        display: flex;
+        justify-content: center;
+        width: auto;
+    }
+
+    .contact-box .map-area .btn-area:has(.btn:nth-child(2)) {
+        justify-content: center;
+    }
+
+    .contact-box .map-area .btn-area:has(.btn:nth-child(1)):not(:has(.btn:nth-child(2))) {
+        justify-content: flex-end;
+    }
+
+    .contact-box .map-area .btn-area .btn {
+        justify-content: center;
+        width: 90rem;
+        font-size: 12rem;
+        background: #8b6f4b;
+        white-space: nowrap;
+    }
+    .contact-box .map-area .btn-area .btn + .btn {
+        margin-left: 20rem;
+    }
+    .contact-box .map-area .btn-area .btn .icon {
+        display: inline-flex;
+        background: url(../img/sub/icon-arrow.png) no-repeat;
+        background-size: 18rem 13rem;
+        width: 18rem;
+        height: 13rem;
+        margin-left: 10rem;
+    }
+
+
+    /********************** sub 4 **********************/
+    .sub-wrapper.bg2 {
+        background-size: cover cover;
+    }
+    .agree-box .agree {
+        width: auto;
+        padding: 20rem;
+    }
+    .agree-box .txt-box {
+        margin-bottom: 85rem;
+    }
+    .agree-box .txt-box .img1 {
+        width: 117rem;
+        margin: 60rem auto 0;
+    }
+    .agree-box .txt-box .img1 img {
+        width: 100%;
+        height: 100%;
+    }
+    .agree-box .txt-box .txt {
+        margin-top: 25rem;
+        font-size: 20rem;
+    }
+    .agree-box .agree .tit:first-of-type {
+        margin-top: 20rem;
+    }
+    .agree-box .agree .tit {
+        font-size: 15rem;
+        margin-top: 100rem;
+    }
+
+    .agree-box .agree-check {
+        display: block
+    }
+    .agree-box .agree-check .txt {
+        font-size: 13rem;
+    }
+    .agree-box .radio-label {
+        font-size: 15rem;
+    }
+    .agree-box .radio-group {
+        margin-top: 20rem;
+        justify-content: center;
+    }
+
+    .table-header .table-cell {
+        padding: 10rem;
+    }
+
+
+    .form-row {
+        display: block;
+        border:0;
+    }
+    .form-group {
+        width: 100%;
+        border-bottom: 1rem solid #ddd;
+    }
+    .form-label {
+        width: 60rem;
+        white-space: nowrap;
+        font-size: 12rem;
+        padding: 10rem;
+        height: 38rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .form-row .item {
+        padding: 0;
+        padding-left: 10rem;
+    }
+    .agree-box .item  .radio-label {
+        font-size: 12rem;
+    }
+    .form-row .item input[type="text"] {
+        font-size: 12rem;
+        width: 200rem;
+    }
+    .form-row .item input[type="number"] {
+        width: 75rem;
+        font-size: 12rem;
+    }
+
+
+    .info {
+        margin-bottom: 20rem;
+    }
+    .form-container .btn-area {
+        padding: 0 20rem;
+    }
+    .form-container .btn-area .btn {
+        width: 100%;
+        font-size: 15rem;
+    }
 }

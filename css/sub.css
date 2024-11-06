@@ -599,13 +599,17 @@ body{-webkit-text-size-adjust: none;
     padding: 20rem;
     text-align: center;
     color:#fff;
-}
 
+}
+.table-cell:first-of-type {
+    border-left: 0;
+}
 .table-cell {
     flex: 1;
     padding: 20rem;
     text-align: center;
     color:#222;
+    border-left: 1rem solid #ddd;
 }
 
 .table-row:not(.table-header) .table-cell {
