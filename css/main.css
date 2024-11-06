@@ -1,3 +1,8 @@
+
+.main-header > .l img{
+    border:1px solid pink;
+}
+
 *{padding:0; margin:0;}
 html{
     font-size:1px;
@@ -119,9 +124,6 @@ body{-webkit-text-size-adjust: none;}
     display:flex;
     justify-content:space-between;
     padding:0 80rem;
-}
-.main-header > .l img{
-    border:1px solid green;
 }
 .main-header > .r{
     display:flex;
