@@ -1,0 +1,166 @@
+@media screen and (max-width:767px){
+
+    .only-web{
+        display:none;
+    }
+    .only-mo{
+        display:block;
+    }
+
+    /* wrap */   
+    .sub-wrapper{
+        min-width:auto;
+    }
+
+    .centum-box{
+        padding-left:30rem;
+        padding-right:30rem;
+    }
+
+    /* head */
+    .sub-header{
+        padding:10rem 20rem 0 20rem;
+    }   
+    .sub-header > .l > a > img{
+        width:82rem;
+        height:40rem;
+    }
+    .sub-header > .r > .number{
+        width:22rem;
+        height:22rem;
+        font-size:0;
+        background-image:url(../img/sub/header-tal-m.png);
+        background-size:22rem 22rem;
+    }
+    .sub-header > .r > .menu{
+        margin-left:0;
+    }
+
+    /* rnb */
+    .rnb-inner{
+        padding-left:14%
+    }
+    .rnb-close-btn{
+        left:auto;
+        right:50rem;
+    }
+    .rnb-logo{
+        left:0;
+        right:0;
+        text-align:center;
+    }
+    .rnb-logo > img{
+        width:80%;
+    }
+    .rnb-list > li{
+        font-size:25rem;
+        line-height:60rem;
+    }
+    /* footer */
+    .sub-footer{
+        flex-direction:column;
+        padding:140rem 0 33rem;
+    }
+    .sub-footer .logo{
+        padding:0 20rem 15rem;;
+    }
+    .sub-footer .logo img{
+        width:207rem;
+        height:20rem;
+    }
+    .sub-footer > .con > p:first-child{
+        font-size:11rem;
+        line-height:15rem;
+        padding:0 5rem;
+    }
+    .sub-footer > .con > p:nth-child(2){
+        padding:20rem 20rem 0;
+        font-size:10rem;
+        line-height:15rem;
+    }
+    .sub-footer > .con > p:last-child{
+        padding:30rem 20rem 0;
+        font-size:10rem;
+        line-height:15rem;
+        text-align:center;
+    }
+    .footer-info{
+        position:absolute;
+        right:20rem;
+        font-size:14rem;
+        line-height:1;
+        color:#000000;
+    }
+    .sub-footer > .person-info.only-web{
+        display:none;
+    }
+    .sub-footer > .top-bottom{
+        position:absolute;
+        top:25rem;
+        left:50%;
+        transform:translate(-50%,0)
+    }
+
+    /* sub1 */
+
+    .centum-box{
+        position:relative;
+    }
+
+    .centum-box .txt-box .title .web{
+        display:none;
+    }
+
+    .centum-box .txt-box .title .mo{
+        display:block;
+        width:144rem;
+        height:91rem;
+    }
+
+
+    .centum-box .img-box{
+        position:absolute;
+        top:200rem;
+        left:70rem;;
+        right:auto;
+        width:276rem;
+        height:250rem;
+    }
+    .centum-box .image-container{
+        width:142rem;
+        height:203rem;
+    }
+    .centum-box .image-container:nth-child(1){
+        top:30rem;
+        right:132rem;
+    }
+
+    .centum-box .txt-animation{
+        bottom:0rem;
+        right:20rem;
+    }
+    .centum-box .txt-animation .web{
+        display:none;
+    }
+    .centum-box .txt-animation .mo{
+        display:block;
+        width:201rem;
+        height:37rem;
+    }
+
+    .centum-box .txt-box .sub-title img{
+        width:295rem;
+    }
+
+    .centum-box .txt-box .title{
+        margin-bottom:270rem;
+    }
+
+    .centum-box .txt-box .info-txt .row{
+        margin-top:9rem;
+    }
+    .centum-box .txt-box .info-txt .row .dd{
+        font-weight:300;
+    }
+
+}

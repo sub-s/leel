@@ -6,8 +6,7 @@
     <link rel="stylesheet" type="text/css" href="./css/font.css">
     <link rel="stylesheet" type="text/css" href="./css/sub.css">
     <link rel="stylesheet" type="text/css" href="./css/sub2.css">
-    <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="./css/m.css">
-    <link rel="stylesheet" type="text/css" media="screen and (max-width:767px) and (orientation:landscape)" href="./css/mLandscape.css">
+    <link rel="stylesheet" type="text/css" href="./css/sub_m2.css">
 </head>
 
 <body>
@@ -40,10 +39,12 @@
             <div class="centum-box">
                 <div class="txt-box">
                     <p class="title">
-                        <img src="./img/sub/sub-title01.png" alt="RLVERPARK CENTUM" >
+                        <img src="./img/sub/sub-title01.png" alt="RLVERPARK CENTUM" class="web" >
+                        <img src="./img/sub/sub1-logo-m.png" alt="RLVERPARK CENTUM" class="mo" >
                     </p>
                     <p class="sub-title">
-                        <img src="./img/sub/sub-stitle01.png" alt="Project summary" >
+                        <img src="./img/sub/sub-stitle01.png" alt="Project summary" class="only-web" >
+                        <img src="./img/sub/sub-stitle01-m.png" alt="Project summary" class="only-mo" >
                     </p>
                     <div class="info-txt">
                         <div class="row">
@@ -75,8 +76,9 @@
                 </div>
                 <div class="img-box">
                     <div class="image-container">
-                        <img src="./img/sub/sub-img02.png" alt="첫 번째 이미지">
-                        <div class="sub2-hidden-img-box-text">
+                        <!-- <img class="su1-img-box" src="./img/sub/sub-img02.png" alt="첫 번째 이미지"> -->
+                        <div class="su1-img-box su1-moving-img-box"></div>
+                        <!-- <div class="sub2-hidden-img-box-text">
                             <div>
                                 <span class="s">
                                     롯데건설이 만드는<br />
@@ -88,13 +90,14 @@
                                     가치와 자부심<br />
                                 </span>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="image-container">
                         <img src="./img/sub/sub-img01.png" alt="두 번째 이미지">
                     </div>
                     <div class="txt-animation">
-                        <img src="./img/sub/text-animation.png" alt="부산 첫 르엘, 센텀의 정점에 서다" >
+                        <img src="./img/sub/text-animation.png" alt="부산 첫 르엘, 센텀의 정점에 서다" class="web" >
+                        <img src="./img/sub/sub1-visual-img-text.png" alt="부산 첫 르엘 - 센텀의 정점에 서다" class="mo" >
                     </div>
                 </div>
             </div>
@@ -103,8 +106,13 @@
     </div>
     <!-- // 컨텐츠 영역 -->
     <div class="sub-footer">
+        <div class="top-bottom only-mo">
+            <button>TOP</button>
+        </div>
         <div class="logo">
-            <img src="./img/footer-logo.png" alt="footer 로고">
+            <img src="./img/footer-logo.png" alt="footer 로고" class="only-web">
+            <img src="./img/m/footer-logo-m.png" alt="logo" class="only-mo" />
+            <a href="#" class="only-mo footer-info">개인정보취급방침</a>
         </div>
         <div class="con">
             <p>시행위탁자 : (주)백송홀딩스 시행수탁자 : (주)하나자산신탁 시공사 : 롯데건설(주) 분양대행사 : (주)제이앤제이플래닝, 지우알엔씨(주), 마켓리더</p>
@@ -118,17 +126,17 @@
             </p>
             <p>Copyright © LOTTE ENGINEERING & CONSTRUCTION Co., Ltd. All rights reserved</p>
         </div>
-        <div class="person-info">
+        <div class="person-info only-web">
             <a href="#">개인정보취급방침</a>
         </div>
-        <div class="top-bottom">
+        <div class="top-bottom only-web">
             <button>TOP</button>
         </div>
     </div>
 
 </div>
 <script>
-    const images = document.querySelectorAll('.image-container img');
+    const images = document.querySelectorAll('.image-container .su1-moving-img-box, .image-container img');
     // const containers = document.querySelectorAll('.image-container');
     const txtAnimationElements = document.querySelectorAll('.txt-animation');
 

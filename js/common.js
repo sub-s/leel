@@ -17,21 +17,21 @@ window.onload = function(){
     let checkedEvent = false;
     let touchChecked = 0;
 
-    setTimeout(()=>{
-        _popMovie.classList.add("open");
-        setTimeout(()=>{
-            document.querySelector(".modal-video").play();
-            document.querySelector(".modal-video").addEventListener("ended",()=>{
-                console.log("popupChecked : ",popupChecked)
-                setTimeout(()=>{
-                    if(popupChecked){
-                        _popMovie.classList.remove("open");
-                        _popImg.classList.add("open");
-                    }
-                },500)
-            })
-        },3000)
-    },500)
+    // setTimeout(()=>{
+    //     _popMovie.classList.add("open");
+    //     setTimeout(()=>{
+    //         document.querySelector(".modal-video").play();
+    //         document.querySelector(".modal-video").addEventListener("ended",()=>{
+    //             console.log("popupChecked : ",popupChecked)
+    //             setTimeout(()=>{
+    //                 if(popupChecked){
+    //                     _popMovie.classList.remove("open");
+    //                     _popImg.classList.add("open");
+    //                 }
+    //             },500)
+    //         })
+    //     },3000)
+    // },500)
 
     _modalOpenBt.addEventListener("click",()=>{
             _popMovie.classList.add("open");
@@ -60,7 +60,7 @@ window.onload = function(){
         _popImg.classList.remove("open");
     })
     const scrollEv = (ev)=>{
-        ev.preventDefault();
+        // ev.preventDefault();
         const scrollTop = ev.currentTarget.scrollTop;
         const _firstBooks = _conWrapper.querySelector(".con9 .book-box-wrapper.book1 .book-box");
         const _books = _conWrapper.querySelectorAll(".con9 .book-box-wrapper.book2 .book-box, .con9 .book-box-wrapper.book3 .book-box");
@@ -182,11 +182,11 @@ window.onload = function(){
         },1500);
     }
     _conWrapper.addEventListener("touchstart",(ev)=>{
-        ev.preventDefault();
+        // ev.preventDefault();
         touchChecked = ev.changedTouches[0].screenY;
     })
     _conWrapper.addEventListener("touchend",(ev)=>{
-        ev.preventDefault();
+        // ev.preventDefault();
         controllEv(ev);
     })
     _conWrapper.addEventListener("wheel",(ev)=>{

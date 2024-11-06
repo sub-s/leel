@@ -1,3 +1,9 @@
+only-mo{
+    display:none;
+}
+
+
+/* */
 .image-container{
     position:relative;
 }
@@ -27,4 +33,54 @@
     font-size:20rem;
     line-height:30rem;
     color:#fff;
+}
+
+
+
+/* sub1 */
+.su1-moving-img-box{
+    width:408rem;
+    height:508rem;
+    background:url(../img/sub/sub1-img-bg-box.png) no-repeat;
+    background-size:955rem 580rem;
+    background-position:0, 0;
+    transition: transform 1s ease, opacity 1s ease;
+    animation:su1bg ease 40s infinite;
+    transform: scale(1.2);
+    opacity: 0;
+}
+.su1-moving-img-box.animated {
+    transform: scale(1);
+    opacity: 1;
+}
+.centum-box .txt-box .title .mo{
+    display:none;
+}
+.centum-box .txt-animation .mo{
+    display:none;
+}
+@keyframes su1bg{
+    0%{
+        background-position:0, 0;
+    }
+    50%{
+        background-position:100%, 0;
+    }
+    100%{
+        background-position:0, 0;
+    }
+}
+
+
+
+
+
+
+/* footer */
+.sub-footer .only-mo.footer-info{
+    display:none;
+}
+
+.sub-footer .logo .only-mo{
+    display:none;
 }
