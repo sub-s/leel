@@ -648,15 +648,15 @@ body{-webkit-text-size-adjust: none;
 }
 
 
-.item {
+.form-row .item {
     display: flex;
     align-items: center;
     padding: 13rem;
 }
-.item .radio-label + .radio-label {
+.form-row .item .radio-label + .radio-label {
     margin-left: 25rem;
 }
-.item input[type="number"] {
+.form-row .item input[type="number"] {
     width: 100rem;
     font-size: 20rem;
     height: 38rem;
@@ -667,7 +667,7 @@ body{-webkit-text-size-adjust: none;
     box-sizing: border-box;
 }
 
-.item input[type="text"] {
+.form-row .item input[type="text"] {
     width: 300rem;
     font-size: 18rem;
     padding: 5rem;
