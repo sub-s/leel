@@ -538,6 +538,9 @@
     width:390rem;
     height:390rem;
 }
+.content-area.con9 > .innerWrapper .movie-box video{
+    z-index:5;
+}
 .content-area.con9 div > .wings.top{
     width:163rem;
     height:200rem;

@@ -234,6 +234,11 @@
         document.querySelector(".rnb-close-btn").addEventListener("click",()=>{
             document.querySelector("#rnb").classList.remove("open");
         })
+        document.querySelectorAll(".top-bottom").forEach((bt,idx)=>{
+            bt.addEventListener("click",()=>{
+                document.querySelector("html").scrollTop = 0;
+            });
+        })
 
     }
 </script>

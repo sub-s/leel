@@ -43,7 +43,6 @@ window.onload = function(){
     _modalImg.addEventListener("touchend",(ev)=>{
         ev.preventDefault();
         const checked = touchImg - ev.changedTouches[0].screenY;
-        console.log("checked : ",checked)
         let classChecked = ""
         for(let i=0;i<3; i++){
             const cl = "p" + i;
@@ -52,7 +51,6 @@ window.onload = function(){
                 break;
             }
         }
-        console.log("classChecked : ",classChecked)
         if(checked > 0){
             if(classChecked == "p0"){
                 _modalImg.classList.add("p1");
@@ -75,7 +73,6 @@ window.onload = function(){
             }
 
         }
-        controllEv(ev);
     })
 
     _modalOpenBt.addEventListener("click",()=>{
