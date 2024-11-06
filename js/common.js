@@ -182,11 +182,11 @@ window.onload = function(){
         },1500);
     }
     _conWrapper.addEventListener("touchstart",(ev)=>{
-        ev.preventDefault();
+        // ev.preventDefault();
         touchChecked = ev.changedTouches[0].screenY;
     })
     _conWrapper.addEventListener("touchend",(ev)=>{
-        ev.preventDefault();
+        // ev.preventDefault();
         controllEv(ev);
     })
     _conWrapper.addEventListener("wheel",(ev)=>{
