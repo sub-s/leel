@@ -25,17 +25,33 @@
 
 
 /******* 서브 3 ************/
+.contact-box .txt-box .img1 {
+    width: 117rem;
+    height: 58rem;
+    margin: 20rem auto 20rem;
+}
+
+.contact-box .txt-box .img1 img {height: 100%;}
+.contact-box .txt-box .txt {
+    font-size: 15rem;
+}
+
+
 .contact-box .map-area .inner {
     display: block;
     width: auto;
-    padding: 0 145rem;
+    padding: 0 30rem;
 
 }
-.contact-box .map-area .inner .item {}
+.contact-box .map-area .inner .item {
+    padding-top: 20rem;
+    padding-bottom: 0;
+}
 .contact-box .map-area .inner .item:first-of-type {
     border-right: none;
     border-bottom: 1rem solid #333;
     padding-right: 0;
+    padding-bottom: 40rem;
 }
 
 .contact-box .map-area .item .map {
@@ -58,15 +74,15 @@
 }
 
 
-
-
-
 .contact-box .map-area .inner .tit {
-    font-size: 30rem;
+    font-size: 15rem;
 }
 
 .contact-box .map-area .inner .address {
-    font-size: 22rem;
+    font-family: 'SUIT';
+    font-weight: 300;
+    color:#dedede;
+    font-size: 11rem;
 }
 
 .contact-box .map-area .btn-area {
@@ -84,13 +100,11 @@
 }
 
 .contact-box .map-area .btn-area .btn {
-    display: flex;
-    width: 180rem;
-    font-size: 16rem;
+    justify-content: center;
+    width: 90rem;
+    font-size: 12rem;
     background: #8b6f4b;
-    padding: 10rem 20rem 15rem;
-    border-radius: 3rem;
-    color:#fff;
+    white-space: nowrap;
 }
 .contact-box .map-area .btn-area .btn + .btn {
     margin-left: 20rem;
@@ -101,7 +115,7 @@
     background-size: 18rem 13rem;
     width: 18rem;
     height: 13rem;
-    margin-left: 20rem;
+    margin-left: 10rem;
 }
 
 

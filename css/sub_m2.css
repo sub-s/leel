@@ -42,7 +42,9 @@
     }
     .rnb-close-btn{
         left:auto;
-        right:50rem;
+        top:0rem;
+        right:-20rem;
+        font-size:11rem;
     }
     .rnb-logo{
         left:0;
@@ -53,7 +55,7 @@
         width:80%;
     }
     .rnb-list > li{
-        font-size:25rem;
+        font-size:17rem;
         line-height:60rem;
     }
     /* footer */
