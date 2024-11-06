@@ -48,7 +48,8 @@
     justify-content:center;
     padding:0 0 0 0;
 }
-.con1-line{
+.con1 > .innerWrapper{
+    z-index:1;
 }
 .con1 > .con1-top{
     padding-bottom:80rem;
@@ -685,6 +686,9 @@
     top:50%;
     height:200rem;
     background-size:auto 130rem;
+}
+.web-modal-open:hover{
+    background:red;
 }
 
 .modal-pop-img{

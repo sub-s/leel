@@ -76,6 +76,7 @@ window.onload = function(){
     })
 
     _modalOpenBt.addEventListener("click",()=>{
+        console.log("dkdkdkdkdkdkkdk")
             _popMovie.classList.add("open");
             document.querySelector(".modal-video").play();
     })
@@ -224,6 +225,10 @@ window.onload = function(){
         },1500);
     }
     _conWrapper.addEventListener("touchstart",(ev)=>{
+        if(ev.target === _modalOpenBt){
+            ev.target.click();
+            console.log("ev.target : ",ev.target)
+        }
         const cl = getCheckedCurrentPosition();
         if(cl !== "w10") ev.preventDefault();
         touchChecked = ev.changedTouches[0].screenY;
