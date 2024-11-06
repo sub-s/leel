@@ -118,6 +118,9 @@
 
     /* sub1 */
 
+    .su1-moving-img-box{
+        animation:su1bg ease 90s infinite;
+    }
     .centum-box{
         position:relative;
     }
