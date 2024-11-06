@@ -47,9 +47,11 @@
     display:flex;
     justify-content:center;
     /* padding:0 0 60rem 0; */
+    border:3px solid green;
 }
 .con1 > .innerWrapper{
     padding:0;
+    border:2px solid red;
 }
 .con1-line{
 }
