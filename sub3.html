@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <link rel="stylesheet" type="text/css" href="./css/font.css">
+    <link rel="stylesheet" type="text/css" href="./css/sub.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="./css/m.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:767px) and (orientation:landscape)" href="./css/mLandscape.css">
+</head>
+
+<body>
+<div class="sub-wrapper">
+    <div class="sub-header">
+        <div class="l">
+            <a href="./index.html"><img src="./img/logo.png" alt="로고 이미지"></a>
+        </div>
+        <div class="r">
+            <a class="number" href="tel:1533-9988">1533-9988</a>
+            <div class="menu"></div>
+        </div>
+    </div>
+    <!-- 컨텐츠 영역 -->
+    <div class="sub-content">
+        <div class="inner">
+            <!-- rnb -->
+            <div id="rnb">
+                <div class="rnb-inner">
+                    <button class="rnb-close-btn">CLOSE</button>
+                    <ul class="rnb-list">
+                        <li><a href="./sub1.html">사업개요</a></li>
+                        <li><a href="./sub2.html">입지환경</a></li>
+                        <li><a href="./sub3.html">오시는길</a></li>
+                        <li><a href="./sub4.html">관심고객등록</a></li>
+                    </ul>
+                    <div class="rnb-logo"><img src="./img/rnb-logo.png" /></div>
+                </div>
+            </div>
+
+            <div class="contact-box">
+                <div class="txt-box">
+                    <p class="img1">
+                        <img src="./img/sub/contact-logo.png" alt="LEEL RIVERPARK CENTUM">
+                    </p>
+                    <p class="txt">CONTACT</p>
+                </div>
+
+                <div class="map-area">
+                    <div class="inner">
+                        <div class="item">
+                            <img src="./img/sub/contact-map01.png" alt="견본 주택 찾아오시는 길">
+                            <p class="tit">갤 러 리</p>
+                            <p class="address">부산광역시 해운대구 우동 1406-8번지</p>
+                            <div class="btn-area">
+                                <a href="#" class="btn">
+                                    카카오 지도
+                                    <span class="icon"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="./img/sub/contact-map02.png" alt="르엘 리버파크 센텀 찾아오시는 길">
+                            <p class="tit">현 장</p>
+                            <p class="address">부산광역시 해운대구 부산광역시 해운대구 센텀동로 210 일원</p>
+                            <div class="btn-area">
+                                <a href="#" class="btn">
+                                    네이버 지도
+                                    <span class="icon"></span>
+                                </a>
+                                <a href="#" class="btn">
+                                    카카오 지도
+                                    <span class="icon"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- // 컨텐츠 영역 -->
+    <div class="sub-footer">
+        <div class="logo">
+            <img src="./img/footer-logo.png" alt="footer 로고">
+        </div>
+        <div class="con">
+            <p>시행위탁자 : (주)백송홀딩스 시행수탁자 : (주)하나자산신탁 시공사 : 롯데건설(주) 분양대행사 : (주)제이앤제이플래닝, 지우알엔씨(주), 마켓리더</p>
+            <p>
+                홈페이지에 포함된 모든 CG 및 이미지, 그림, 내용 등은 소비자의 이해를 돕기 위해 일부 개발 예정 자료이거나<br>
+                시행까지 개략적으로 표현 및 설명한 것으로 실제와 다를 수 있으며, 사업진행 및 인·허가 과정에서 변경될 수 있습니다.<br>
+                ※ 사업지 인근 원형육교의 CG와 동해선 전철 재송역 주변 선하지의 CG 및 이미지 등은 소비자의 이해를 돕기 위해 제작된 것으로 이를 근거로<br>
+                관계부처, 시행사, 시공사 등에게 이의를 제기하거나 민, 형사상 소송자료로 사용할 수 없으며, 추후 관계부처와의 협의결과에 따라 계획이 변경될 수 있습니다.<br>
+                ※ 본 홈페이지에 포함된 모든 CG 및 이미지, ISO, 그림 등은 소비자의 이해를 돕기 위한 이미지로 시공되는 외관, 실내의 마감 및 창호, 천정고 등 실제와 상이하므로 견본주택을 참조하시기 바랍니다.<br>
+                ※ 본 홈페이지에 포함된 모든 CG 및 이미지, 내용을 근거로 시행사, 시공사, 업무대행사 등 유관 사업체에게 이의를 제기하거나 민·형사상 소송자료로 사용할 수 없습니다.<br>
+            </p>
+            <p>Copyright © LOTTE ENGINEERING & CONSTRUCTION Co., Ltd. All rights reserved</p>
+        </div>
+        <div class="person-info">
+            <a href="#">개인정보취급방침</a>
+        </div>
+        <div class="top-bottom">
+            <button>TOP</button>
+        </div>
+    </div>
+
+</div>
+<script>
+    window.onload = function(){
+
+
+        document.querySelector(".sub-header .menu").addEventListener("click",()=>{
+            document.querySelector("#rnb").classList.add("open");
+        })
+        document.querySelector(".rnb-close-btn").addEventListener("click",()=>{
+            document.querySelector("#rnb").classList.remove("open");
+        })
+
+    }
+</script>
+</body>
+</html>

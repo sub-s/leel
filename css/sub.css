@@ -1,0 +1,844 @@
+*{padding:0; margin:0;}
+html{
+    font-size:1px;
+    font-family:"Nanum Myeongjo";
+}
+body{-webkit-text-size-adjust: none;
+    font-size: 14rem;
+}
+
+.only-web{
+    display:block;
+}
+.only-mobilie{
+    display:none;
+}
+
+
+
+/***************************************/
+
+
+
+/* wrapper */
+.sub-wrapper{
+    min-width: 1920rem;
+    width:100%;
+    height:100%;
+    padding:0 0 0 0;
+    background:#f4faf9 url(../img/sub/sub-bg.png) no-repeat center top;
+}
+
+
+.sub-wrapper.bg2{
+
+    width:100%;
+    height:100%;
+    padding:0 0 0 0;
+    background:#f4faf9 url(../img/sub/sub-bg02.png) no-repeat center top;
+    background-size: 100% auto;
+}
+
+
+/* rbb */
+#rnb{
+    position:fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    z-index:500;
+    width:0;
+    transition:width ease 2s;
+}
+#rnb.open{
+    width:50%;
+}
+.rnb-inner{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    display:flex;
+    align-items:center;
+    width:50vw;
+    padding:0 0 0 290rem;
+    box-sizing:border-box;
+    background:url(../img/rnb-bg.png);
+    background-size:1000rem;
+}
+.rnb-close-btn{
+    position:absolute;
+    top:57rem;
+    left:720rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:150rem;
+    height:60rem;
+    font-family:"SUIT";
+    font-weight:300;
+    font-size:20rem;
+    line-height:1;
+    color:#fff;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    background:none;
+
+}
+.rnb-list{
+    list-style:none;
+}
+.rnb-list > li{
+    font-size:50rem;
+    line-height:120rem;
+    color:#fff;
+    font-weight:300;
+}
+.rnb-list > li > a{
+    color:#fff;
+    text-decoration:none;
+}
+.rnb-logo{
+    position:absolute;
+    left:100rem;
+    bottom:124rem;
+}
+
+
+/* header */
+.sub-header{
+    z-index:100;
+    display:flex;
+    justify-content:space-between;
+    padding:58rem 170rem 120rem 170rem;
+}
+.sub-header > .r{
+    display:flex;
+    align-items:center;
+}
+.sub-header > .r > .number{
+    display:flex;
+    align-items:center;
+    padding:0 0 0 20rem;
+    font-family:"Nanum Myeongjo";
+    font-weight:400;
+    font-size:24rem;
+    color:#000;
+    text-decoration:none;
+    background:url(../img/icon-tel.png) no-repeat center left;
+}
+.sub-header > .r > .number:active{
+    color:#000;
+}
+.sub-header > .r > .menu{
+    width:25rem;
+    height:20rem;
+    margin:0 0 0 40rem;
+    cursor:pointer;
+    background:url(../img/icon-ham.png) no-repeat center;
+}
+
+
+
+.centum-box { margin: 0 auto; padding-left: 290rem; padding-right: 245rem; padding-bottom: 120rem; position: relative; }
+/* 공통 컨테이너 스타일 */
+.centum-box .txt-box {position: relative; z-index: 1; padding-top: 125rem; }
+.centum-box .txt-box .title {margin-bottom: 115rem;}
+.centum-box .txt-box .sub-title {margin-bottom: 65rem;}
+.centum-box .txt-box .info-txt {}
+.centum-box .txt-box .info-txt .row:first-of-type {
+    margin-top: 0;
+}
+.centum-box .txt-box .info-txt .row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 35rem;
+}
+.centum-box .txt-box .info-txt .row .dt {
+    width: 70rem;
+    flex: 0 0 auto;
+    font-size: 18rem;
+    color:#353535;
+    font-family: "NotoSansCJKkr";
+}
+.centum-box .txt-box .info-txt .row .dd {
+    font-size: 16rem;
+    margin-left: 50rem;
+    color:#353535;
+    font-family: "NotoSansCJKkr";
+}
+
+.centum-box .img-box {
+
+    position: absolute;
+    top:0;
+    right: 245rem;
+    height: 700rem;
+}
+.centum-box .image-container {
+    width: 410rem;
+    height: 580rem;
+    overflow: hidden;
+    position: absolute;
+}
+.centum-box .image-container > img{
+    top: 90rem;
+    right: 380rem;
+}
+
+.centum-box .image-container:nth-child(1) {
+    top: 90rem;
+    right: 380rem;
+
+}
+.centum-box .image-container:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* 이미지 초기 스타일 (확대 및 투명) */
+.centum-box .image-container img {
+    width: 120%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(1.2);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+/* 애니메이션 완료 후에 적용할 클래스 */
+.centum-box .image-container img.animated {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* 텍스트 애니메이션 스타일 */
+.centum-box .txt-animation {
+    position: absolute;
+    bottom: 40rem;
+    right: 10rem;
+    opacity: 0;
+    transition: opacity 1s ease;
+    font-size: 30rem;
+}
+
+/* 텍스트 애니메이션 완료 후 적용할 클래스 */
+.centum-box .txt-animation.visible {
+    opacity: 1;
+}
+
+
+
+
+
+
+/*서브 2페이지 ******************************/
+
+.centum-box2 {}
+.centum-box2 .txt-box {text-align:center; position: relative;}
+.centum-box2 .txt-box .img2 {position: absolute; top:70rem; left: 50%; transform: translateX(-50%);}
+.centum-box2 .txt-box .img3 {position: absolute; top: 145rem; left: 50%; transform: translateX(-50%); z-index: 2}
+
+
+.centum-box2 .img-box {
+    width: 1830rem;
+    height: 700rem;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+.centum-box2 .image-container {
+    width: 245rem;
+    height: 470rem;
+    overflow: hidden;
+    position: absolute;
+
+}
+
+.centum-box2 .image-container.img1 {top: 120rem; left: 50%; transform: translateX(-50%);}
+.centum-box2 .image-container.img2 {top: 70rem; left: 530rem; }
+.centum-box2 .image-container.img3 {top: 70rem; right: 530rem;}
+.centum-box2 .image-container.img4 {top: 30rem; left: 265rem; }
+.centum-box2 .image-container.img5 {top: 30rem; right: 265rem;}
+.centum-box2 .image-container.img6 {top: 0;}
+.centum-box2 .image-container.img7 {top: 0; right: 0;}
+
+
+/* 이미지 초기 스타일 (확대 및 투명) */
+.centum-box2 .image-container img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(1.2);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+/* 애니메이션 완료 후에 적용할 클래스 */
+.centum-box2 .image-container img.animated {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* 텍스트 애니메이션 스타일 */
+.centum-box2 .txt-animation {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 1s ease;
+
+}
+
+/* 텍스트 애니메이션 완료 후 적용할 클래스 */
+.centum-box2 .txt-animation.visible {
+    opacity: 1;
+}
+.centum-box2 .bottom-txt {margin-top: 50rem; text-align: center;}
+.centum-box2 .bottom-txt .txt1 {
+    font-family: "나눔명조";
+    font-size: 40rem;
+    color:#353535
+}
+.centum-box2 .bottom-txt .txt2 {
+    font-family: 'SUIT';
+    font-size: 16rem;
+    line-height: 30rem;
+    margin-top: 50rem;
+    margin-bottom: 70rem;
+    color: #484741;
+}
+.centum-box2 .map-area {}
+.centum-box2 .map-area img{width: 100%; height: 100%}
+
+
+
+/******* 서브 3 ************/
+.contact-box {text-align: center;}
+.contact-box .txt-box .img1 {margin-bottom: 40rem;}
+.contact-box .txt-box .txt {
+    font-family: 'ClassicoURW';
+    font-weight: 300;
+    font-size: 30rem;
+    color:#8b6f4b;
+}
+.contact-box .map-area {
+    margin-top: 65rem;
+    background: #000000;
+    padding: 110rem 0 110rem;
+}
+.contact-box .map-area .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1110rem;
+    margin: 0 auto;
+
+}
+.contact-box .map-area .inner .item {
+
+}
+.contact-box .map-area .inner .item:first-of-type {
+    border-right: 1rem solid #333;
+    padding-right: 145rem;
+}
+
+
+.contact-box .map-area .inner .tit {
+    font-family: '나눔명조';
+    font-weight: 300;
+    font-size: 25rem;
+    color:#8b6f4b;
+    margin: 45rem 0 15rem;
+}
+
+.contact-box .map-area .inner .address {
+    font-family: 'NotoSansCJKkr';
+    font-weight: 300;
+    font-size: 17rem;
+    letter-spacing: -1rem;
+    color:#fff;
+}
+
+.contact-box .map-area .btn-area {
+    display: flex;
+    justify-content: center;
+    width: 340rem;
+    margin: 30rem auto 0 ;
+}
+
+
+.contact-box .map-area .btn-area:has(.btn:nth-child(2)) {
+    justify-content: center;
+}
+
+.contact-box .map-area .btn-area:has(.btn:nth-child(1)):not(:has(.btn:nth-child(2))) {
+    justify-content: flex-end;
+}
+
+.contact-box .map-area .btn-area .btn {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'NotoSansCJKkr';
+    font-weight: 300;
+    font-size: 16rem;
+    text-decoration: none;
+    padding: 10rem 20rem 15rem;
+    background: #282828;
+    border-radius: 3rem;
+    color:#fff;
+}
+.contact-box .map-area .btn-area .btn + .btn {
+    margin-left: 20rem;
+}
+.contact-box .map-area .btn-area .btn .icon {
+    display: inline-flex;
+    background: url(../img/sub/icon-arrow.png) no-repeat;
+    width: 18rem;
+    height: 13rem;
+    margin-left: 20rem;
+}
+
+
+/***************************** 서브 4 *****************************/
+
+.agree-box {
+    padding-bottom: 150rem;
+}
+.agree-box {text-align: center;}
+.agree-box .txt-box {margin-bottom: 140rem;}
+.agree-box .txt-box .img1 {margin-bottom: 40rem;}
+.agree-box .txt-box .txt {
+    font-family: 'ClassicoURW';
+    font-weight: 300;
+    font-size: 30rem;
+    color:#000;
+    letter-spacing: 5rem;
+}
+
+.agree-box .agree {width: 1100rem;  margin: 0 auto; text-align: left}
+.agree-box .agree .tit {
+    font-family: 'SUIT';
+    font-size: 22rem;
+    margin-bottom: 15rem;
+    margin-top: 95rem;
+    /*font-weight: 700;*/
+}
+.agree-box .agree-text {
+    border: 1rem solid #dddddd;
+    padding: 25rem;
+    font-family: 'SUIT';
+    font-size: 14rem;
+    color: #666;
+    margin-bottom: 15rem;
+    font-weight: 100;
+    height: 245rem;
+    box-sizing: border-box;
+    overflow-y:scroll;
+}
+
+.agree-box .agree-text .line {
+    color:#000;
+    font-weight: 100;
+    padding-left: 13rem;
+    text-decoration: underline;
+}
+.agree-box .agree-text dl dt:first-of-type {
+    margin-top: 0;
+}
+.agree-box .agree-text dl dt {
+    margin-top: 15rem;
+}
+.agree-box .agree-text dl dd {
+    margin-top: 15rem;
+}
+
+
+
+
+
+.agree-box .agree-check {
+    font-family: 'SUIT';
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20rem;
+}
+.agree-box .agree-check .txt {
+    font-size: 16rem;
+    color:#222;
+}
+.agree-box   .radio-group {
+    display: flex;
+    gap: 20rem; /* 라디오 버튼 사이의 간격 조정 */
+    align-items: center;
+}
+
+.agree-box .radio-label {
+    display: flex;
+    align-items: center;
+    font-size: 16rem; /* 텍스트 크기 */
+    cursor: pointer;
+    color:#222;
+}
+
+.agree-box  .radio-label input[type="radio"] {
+    display: none; /* 기본 라디오 버튼 숨기기 */
+}
+
+.agree-box  .custom-radio {
+    width: 20rem;
+    height: 20rem;
+    border: 2rem solid black;
+    border-radius: 50%; /* 원 모양 */
+    display: inline-block;
+    margin-right: 8rem; /* 텍스트와 라디오 버튼 사이의 간격 */
+    position: relative;
+}
+
+.agree-box .radio-label input[type="radio"]:checked + .custom-radio::after {
+    content: "";
+    width: 10rem;
+    height: 10rem;
+    background-color: black; /* 체크된 상태에서의 내부 색상 */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+}
+
+
+
+.info {margin-top:40rem; margin-bottom: 100rem;}
+.info ul {list-style: none}
+.info ul li {
+    font-size: 13rem;
+    margin-top: 5rem;
+    color:#666
+}
+
+
+
+
+
+
+
+
+.table-container {
+    font-family: 'SUIT';
+    font-weight: 300;
+    font-size: 16rem;
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid #333;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+}
+
+.table-row:first-child {border-top:0;}
+.table-row {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #ddd;
+}
+
+.table-header {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+}
+
+.table-header .table-cell {
+    flex: 1;
+    padding: 20rem;
+    text-align: center;
+    color:#fff;
+}
+
+.table-cell {
+    flex: 1;
+    padding: 20rem;
+    text-align: center;
+    color:#222;
+}
+
+.table-row:not(.table-header) .table-cell {
+
+}
+
+
+
+
+/*@media (max-width: 768px) {*/
+/*    .table-row {*/
+/*        flex-direction: column;*/
+/*    }*/
+
+/*    .table-cell {*/
+/*        text-align: left;*/
+/*        padding: 10px;*/
+/*    }*/
+
+/*    .table-header .table-cell {*/
+/*        text-align: center;*/
+/*    }*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+.form-container {
+    font-family: 'SUIT';
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    border-top: 1rem solid #000;
+}
+
+.form-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rem solid #ddd;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.form-label {
+    background-color: #333;
+    color: white;
+    height: 100%;
+    padding: 30rem;
+    width: 120rem;
+    text-align: center;
+    display: block;
+    font-size: 16rem;
+}
+
+.form-row .agree-check {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20rem;
+}
+
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 13rem;
+}
+.item .radio-label + .radio-label {
+    margin-left: 25rem;
+}
+.item input[type="number"] {
+    width: 100rem;
+    font-size: 20rem;
+    height: 38rem;
+    background: none;
+    border: 1rem solid #ddd;
+    padding: 5rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.item input[type="text"] {
+    width: 300rem;
+    font-size: 18rem;
+    padding: 5rem;
+    height: 38rem;
+    background: none;
+    box-sizing: border-box;
+    border: 1rem solid #ddd
+}
+
+.separator {
+    margin: 0 5rem;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 15rem;
+}
+
+
+
+
+
+
+
+
+
+.form-container .btn-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30rem auto 0 ;
+}
+
+
+.form-container .btn-area .btn {
+    min-width: 220rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'NotoSansCJKkr';
+    font-weight: 300;
+    font-size: 20rem;
+    text-decoration: none;
+    padding: 15rem 20rem 17rem;
+    background: #8b6f4b;
+    border-radius: 3rem;
+    color:#fff;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+.form-container .btn-area .btn .icon {
+    display: inline-flex;
+    background: url(../img/sub/icon-arrow.png) no-repeat;
+    width: 18rem;
+    height: 13rem;
+    margin-left: 20rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* footer */
+.sub-footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:stretch;
+    padding:95rem 60rem 160rem 60rem;
+    border-top:1rem solid #ededed;
+    background: #fff;
+    position:relative;
+}
+.sub-footer > .person-info{
+    display:flex;
+    align-items:center;
+}
+.sub-footer > .person-info > a{
+    font-size:16rem;
+    color:#000;
+    text-decoration:none
+}
+.sub-footer > .logo{
+    display:flex;
+    align-items:center;
+}
+.sub-footer > .con{
+    font-family:"SUIT";
+    font-weight:300;
+    text-align:center;
+}
+.sub-footer > .con > p:first-child{
+    font-size:16rem;
+    line-height:30rem;
+    color:#000;
+}
+.sub-footer > .con > p:nth-child(2){
+    padding:25rem 0 0 0;
+    font-size:16rem;
+    line-height:22rem;
+    color:#000;
+}
+.sub-footer > .con > p:last-child{
+    font-family:"ClassicoURW";
+    font-weight:300;
+    font-size:20rem;
+    line-height:80rem;
+    color:#000;
+}
+
+/* top bottun */
+.top-bottom{
+    position:absolute;
+    left: 50%;
+    bottom: 50rem;
+    transform: translateX(-50%);
+    display:flex;
+    justify-content:center;
+    padding:7rem 0;
+}
+.top-bottom > button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:80rem;
+    height:80rem;
+    font-size:16rem;
+    line-height:1;
+    color:#fff;
+    border-radius:100%;
+    cursor:pointer;
+    background:#000;
+}
+
+/***************************************/
+
+
+@media (max-width:1000px){
+    html{
+        font-size:0.6rem;
+    }
+}
+@media (max-width:890px){
+    html{
+        font-size:0.55rem;
+    }
+}
