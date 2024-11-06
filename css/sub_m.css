@@ -121,14 +121,14 @@
 
     /********************** sub 4 **********************/
     .sub-wrapper.bg2 {
-        background-size: cover cover;
+        background-size: cover;
     }
     .agree-box .agree {
         width: auto;
-        padding: 20rem;
+        padding: 0 20rem;
     }
     .agree-box .txt-box {
-        margin-bottom: 85rem;
+        margin-bottom: 45rem;
     }
     .agree-box .txt-box .img1 {
         width: 117rem;
