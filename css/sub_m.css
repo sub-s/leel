@@ -25,17 +25,26 @@
 
 
 /******* 서브 3 ************/
+.contact-box .txt-box .img1 {
+    width: 235rem;
+    height: 115rem;
+    margin: 40rem auto 40rem;
+}
 .contact-box .map-area .inner {
     display: block;
     width: auto;
-    padding: 0 145rem;
+    padding: 0 40rem;
 
 }
-.contact-box .map-area .inner .item {}
+.contact-box .map-area .inner .item {
+    padding-top: 40rem;
+    padding-bottom: 0;
+}
 .contact-box .map-area .inner .item:first-of-type {
     border-right: none;
     border-bottom: 1rem solid #333;
     padding-right: 0;
+    padding-bottom: 80rem;
 }
 
 .contact-box .map-area .item .map {
@@ -58,14 +67,14 @@
 }
 
 
-
-
-
 .contact-box .map-area .inner .tit {
     font-size: 30rem;
 }
 
 .contact-box .map-area .inner .address {
+    font-family: 'SUIT';
+    font-weight: 300;
+    color:#dedede;
     font-size: 22rem;
 }
 
@@ -84,13 +93,11 @@
 }
 
 .contact-box .map-area .btn-area .btn {
-    display: flex;
+    justify-content: center;
     width: 180rem;
-    font-size: 16rem;
+    font-size: 14rem;
     background: #8b6f4b;
-    padding: 10rem 20rem 15rem;
-    border-radius: 3rem;
-    color:#fff;
+    white-space: nowrap;
 }
 .contact-box .map-area .btn-area .btn + .btn {
     margin-left: 20rem;
