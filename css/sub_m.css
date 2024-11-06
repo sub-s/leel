@@ -826,11 +826,11 @@ body{-webkit-text-size-adjust: none;
 
 @media (max-width:1000px){
     html{
-        font-size:0.6px;
+        font-size:0.6rem;
     }
 }
 @media (max-width:890px){
     html{
-        font-size:0.55px;
+        font-size:0.55rem;
     }
 }
