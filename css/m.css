@@ -687,9 +687,6 @@
     height:200rem;
     background-size:auto 130rem;
 }
-.web-modal-open:hover{
-    background:red;
-}
 
 .modal-pop-img{
     width:600rem;
