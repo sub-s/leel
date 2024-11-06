@@ -19,21 +19,21 @@ window.onload = function(){
     let touchChecked = 0;
     let touchImg = 0;
 
-    // setTimeout(()=>{
-    //     _popMovie.classList.add("open");
-    //     setTimeout(()=>{
-    //         document.querySelector(".modal-video").play();
-    //         document.querySelector(".modal-video").addEventListener("ended",()=>{
-    //             console.log("popupChecked : ",popupChecked)
-    //             setTimeout(()=>{
-    //                 if(popupChecked){
-    //                     _popMovie.classList.remove("open");
-    //                     _popImg.classList.add("open");
-    //                 }
-    //             },500)
-    //         })
-    //     },3000)
-    // },500)
+    setTimeout(()=>{
+        _popMovie.classList.add("open");
+        setTimeout(()=>{
+            document.querySelector(".modal-video").play();
+            document.querySelector(".modal-video").addEventListener("ended",()=>{
+                console.log("popupChecked : ",popupChecked)
+                setTimeout(()=>{
+                    if(popupChecked){
+                        _popMovie.classList.remove("open");
+                        _popImg.classList.add("open");
+                    }
+                },500)
+            })
+        },3000)
+    },500)
 
     
     _modalImg.addEventListener("touchstart",(ev)=>{
