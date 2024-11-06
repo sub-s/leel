@@ -229,6 +229,7 @@ window.onload = function(){
         touchChecked = ev.changedTouches[0].screenY;
     })
     _conWrapper.addEventListener("touchend",(ev)=>{
+        const cl = getCheckedCurrentPosition();
         if(cl !== "w10") ev.preventDefault();
         controllEv(ev);
     })
