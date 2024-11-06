@@ -352,6 +352,41 @@ body{-webkit-text-size-adjust: none;
     padding-right: 145rem;
 }
 
+.contact-box .map-area .item .map{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.contact-box .map-area .item .map:hover img {
+    opacity: 0;
+
+}
+.contact-box .map-area .item .map::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/sub/contact-map01-hover.png) no-repeat;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.contact-box .map-area .item .map.map2::before {
+    background: url(../img/sub/contact-map02-hover.png) no-repeat;
+}
+
+.contact-box .map-area .item .map:hover::before {
+    opacity: 1;
+
+}
+
+
+
+
+
 
 .contact-box .map-area .inner .tit {
     font-family: '나눔명조';
@@ -822,15 +857,3 @@ body{-webkit-text-size-adjust: none;
 }
 
 
-
-
-@media (max-width:1000px){
-    html{
-        font-size:0.6px;
-    }
-}
-@media (max-width:890px){
-    html{
-        font-size:0.55px;
-    }
-}
