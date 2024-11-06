@@ -26,25 +26,32 @@
 
 /******* 서브 3 ************/
 .contact-box .txt-box .img1 {
-    width: 235rem;
-    height: 115rem;
-    margin: 40rem auto 40rem;
+    width: 117rem;
+    height: 58rem;
+    margin: 20rem auto 20rem;
 }
+
+.contact-box .txt-box .img1 img {height: 100%;}
+.contact-box .txt-box .txt {
+    font-size: 15rem;
+}
+
+
 .contact-box .map-area .inner {
     display: block;
     width: auto;
-    padding: 0 40rem;
+    padding: 0 30rem;
 
 }
 .contact-box .map-area .inner .item {
-    padding-top: 40rem;
+    padding-top: 20rem;
     padding-bottom: 0;
 }
 .contact-box .map-area .inner .item:first-of-type {
     border-right: none;
     border-bottom: 1rem solid #333;
     padding-right: 0;
-    padding-bottom: 80rem;
+    padding-bottom: 40rem;
 }
 
 .contact-box .map-area .item .map {
@@ -68,14 +75,14 @@
 
 
 .contact-box .map-area .inner .tit {
-    font-size: 30rem;
+    font-size: 15rem;
 }
 
 .contact-box .map-area .inner .address {
     font-family: 'SUIT';
     font-weight: 300;
     color:#dedede;
-    font-size: 22rem;
+    font-size: 11rem;
 }
 
 .contact-box .map-area .btn-area {
@@ -94,8 +101,8 @@
 
 .contact-box .map-area .btn-area .btn {
     justify-content: center;
-    width: 180rem;
-    font-size: 14rem;
+    width: 90rem;
+    font-size: 12rem;
     background: #8b6f4b;
     white-space: nowrap;
 }
@@ -108,7 +115,7 @@
     background-size: 18rem 13rem;
     width: 18rem;
     height: 13rem;
-    margin-left: 20rem;
+    margin-left: 10rem;
 }
 
 
