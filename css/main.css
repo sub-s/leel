@@ -120,6 +120,9 @@ body{-webkit-text-size-adjust: none;}
     justify-content:space-between;
     padding:0 80rem;
 }
+.main-header > .l img{
+    border:1px solid red;
+}
 .main-header > .r{
     display:flex;
     align-items:center;
