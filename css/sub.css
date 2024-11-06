@@ -438,6 +438,7 @@ body{-webkit-text-size-adjust: none;
 .contact-box .map-area .btn-area .btn .icon {
     display: inline-flex;
     background: url(../img/sub/icon-arrow.png) no-repeat;
+    background-size: 18rem 13rem;
     width: 18rem;
     height: 13rem;
     margin-left: 20rem;

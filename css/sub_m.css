@@ -1,3 +1,9 @@
+@media (max-width: 768px) {
+
+
+
+
+
 /* head */
 .sub-header{
     padding:0 40rem;
@@ -66,8 +72,7 @@
 .contact-box .map-area .btn-area {
     display: flex;
     justify-content: center;
-    width: 380rem;
-    /*margin: 30rem auto 0;*/
+    width: auto;
 }
 
 .contact-box .map-area .btn-area:has(.btn:nth-child(2)) {
@@ -93,7 +98,11 @@
 .contact-box .map-area .btn-area .btn .icon {
     display: inline-flex;
     background: url(../img/sub/icon-arrow.png) no-repeat;
+    background-size: 18rem 13rem;
     width: 18rem;
     height: 13rem;
     margin-left: 20rem;
+}
+
+
 }
