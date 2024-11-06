@@ -1,4 +1,4 @@
-only-mo{
+.only-mo{
     display:none;
 }
 
@@ -71,6 +71,35 @@ only-mo{
     }
 }
 
+/* sub2 */
+.centum-box2 .img-box{
+    width:100%;
+    white-space:nowrap;
+    font-size:0;
+    overflow:auto;
+}
+.centum-box2 .image-container,.centum-box2 .image-container.img1, .centum-box2 .image-container.img2, .centum-box2 .image-container.img3, .centum-box2 .image-container.img4,.centum-box2 .image-container.img5{
+    position:relative;
+    top:auto;
+    left:auto;
+    right:auto;
+    bottom:auto;
+    display:inline-block;
+}
+.centum-box2 .image-container.img1{
+    transform:none;
+}
+
+.modal-pop-img-dot{
+    font-size:0;
+}
+.modal-pop-img-dot > span{
+    display:inline-block;
+    width:50rem;
+    height:50rem;
+    border-radius:100%;
+    background:red;
+}
 
 
 

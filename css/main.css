@@ -42,8 +42,8 @@ body{-webkit-text-size-adjust: none;}
     width:50vw;
     padding:0 0 0 290rem;
     box-sizing:border-box;
-    background:url(../img/rnb-bg.png);
-    background-size:1000rem;
+    background:#8b6f4b url(../img/rnb-bg.png) no-repeat;
+    background-size:500rem;
 }
 .rnb-close-btn{
     position:absolute;
@@ -107,6 +107,12 @@ body{-webkit-text-size-adjust: none;}
     transform:translate(0,-100%);
     cursor:pointer;
     background:#fff url(../img/text-modal-open.png) no-repeat center;
+}
+.modal-pop-img > img{
+    width:25vw;
+}
+.modal-pop-img > img + img{
+    margin-left:20rem;
 }
 
 /* header */

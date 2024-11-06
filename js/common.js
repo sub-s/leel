@@ -10,12 +10,14 @@ window.onload = function(){
     const _rnb = document.querySelector("#rnb");
     const _rnbClose = document.querySelector(".rnb-close-btn");
     const _modalOpenBt = document.querySelector(".web-modal-open");
+    const _modalImg = document.querySelector(".modal-pop-img");
     let popupChecked = true;
     let delayTime = false;
     let delayTimer = null;
     let checkedNum = 0;
     let checkedEvent = false;
     let touchChecked = 0;
+    let touchImg = 0;
 
     // setTimeout(()=>{
     //     _popMovie.classList.add("open");
@@ -32,6 +34,20 @@ window.onload = function(){
     //         })
     //     },3000)
     // },500)
+
+    
+    _modalImg.addEventListener("touchstart",(ev)=>{
+        ev.preventDefault();
+        touchImg = ev.changedTouches[0].screenY;
+    })
+    _modalImg.addEventListener("touchend",(ev)=>{
+        ev.preventDefault();
+        const checked = touchImg - ev.changedTouches[0].screenY;
+        console.log("checked : ",checked)
+        controllEv(ev);
+    })
+
+
 
     _modalOpenBt.addEventListener("click",()=>{
             _popMovie.classList.add("open");

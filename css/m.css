@@ -683,6 +683,22 @@
     background-size:auto 130rem;
 }
 
+.modal-pop-img{
+    width:600rem;
+    height:840rem;
+}
+.modal-pop-img > div, .modal-pop-img > div > img{
+    width:100%;
+    font-size:0;
+    white-space:nowrap;
+    overflow:hidden;
+}
+.modal-pop-img > div > img + img{
+    margin-left:0rem;
+}
+
+
+
 /* modal */
 .clsoe-button{
     font-size:40rem;
