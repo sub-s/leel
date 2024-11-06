@@ -121,7 +121,7 @@ body{-webkit-text-size-adjust: none;}
     padding:0 80rem;
 }
 .main-header > .l img{
-    border:1px solid red;
+    border:1px solid blue;
 }
 .main-header > .r{
     display:flex;
@@ -214,6 +214,7 @@ body{-webkit-text-size-adjust: none;}
     flex-direction:column;
     justify-content:center;
     padding:135rem 0 135rem 0;
+    box-sizing:border-box;
     transition:padding ease 3s;
 }
 
