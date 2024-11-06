@@ -224,11 +224,12 @@ window.onload = function(){
         },1500);
     }
     _conWrapper.addEventListener("touchstart",(ev)=>{
-        // ev.preventDefault();
+        const cl = getCheckedCurrentPosition();
+        if(cl !== "w10") ev.preventDefault();
         touchChecked = ev.changedTouches[0].screenY;
     })
     _conWrapper.addEventListener("touchend",(ev)=>{
-        // ev.preventDefault();
+        if(cl !== "w10") ev.preventDefault();
         controllEv(ev);
     })
     _conWrapper.addEventListener("wheel",(ev)=>{
