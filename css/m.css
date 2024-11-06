@@ -84,6 +84,7 @@
     bottom:0;
     left:0;
     right:0;
+    z-index:100;
     display:flex;
     align-items:stretch;
     height:100rem;
@@ -686,18 +687,63 @@
 .modal-pop-img{
     width:600rem;
     height:840rem;
+    overflow:hidden;
 }
+
+
+
+.modal-pop-img > div{
+    position:relative;
+    left:0;
+    display:inline-block;
+    transition:left ease 1s;
+}
+
+.modal-pop-img.p0 > div{
+    left:0;
+}
+.modal-pop-img.p1 > div{
+    left:-100%;
+}
+.modal-pop-img.p2 > div{
+    left:-200%;
+}
+.modal-pop-img.p0 + .modal-pop-img-dot > span:nth-child(1){
+    background:rgba(0,0,0,0.7)
+}
+.modal-pop-img.p1 + .modal-pop-img-dot > span:nth-child(2){
+    background:rgba(0,0,0,0.7)
+}
+.modal-pop-img.p2 + .modal-pop-img-dot > span:nth-child(3){
+    background:rgba(0,0,0,0.7)
+}
+
+
 .modal-pop-img > div, .modal-pop-img > div > img{
     width:100%;
     font-size:0;
     white-space:nowrap;
-    overflow:hidden;
 }
 .modal-pop-img > div > img + img{
     margin-left:0rem;
 }
-
-
+.modal-pop-img-dot{
+    padding-top:20rem;
+    text-align:center;
+}
+.modal-pop-img-dot > span{
+    display:inline-block;
+    width: 15rem;
+    height: 15rem;
+    border-radius:100%;
+    background:#777;
+}
+.modal-pop-img-dot > span.active{
+    background:rgba(0,0,0,0.7)
+}
+.modal-pop-img-dot > span + span{
+    margin-left:20rem;
+}
 
 /* modal */
 .clsoe-button{

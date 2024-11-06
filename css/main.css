@@ -108,10 +108,10 @@ body{-webkit-text-size-adjust: none;}
     cursor:pointer;
     background:#fff url(../img/text-modal-open.png) no-repeat center;
 }
-.modal-pop-img > img{
+.modal-pop-img img{
     width:25vw;
 }
-.modal-pop-img > img + img{
+.modal-pop-img img + img{
     margin-left:20rem;
 }
 

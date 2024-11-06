@@ -44,10 +44,39 @@ window.onload = function(){
         ev.preventDefault();
         const checked = touchImg - ev.changedTouches[0].screenY;
         console.log("checked : ",checked)
+        let classChecked = ""
+        for(let i=0;i<3; i++){
+            const cl = "p" + i;
+            if(_modalImg.classList.contains(cl)){
+                classChecked = cl;
+                break;
+            }
+        }
+        console.log("classChecked : ",classChecked)
+        if(checked > 0){
+            if(classChecked == "p0"){
+                _modalImg.classList.add("p1");
+                _modalImg.classList.remove("p0");
+                _modalImg.classList.remove("p2");
+            }else if(classChecked == "p1"){
+                _modalImg.classList.add("p2");
+                _modalImg.classList.remove("p1");
+                _modalImg.classList.remove("p0");
+            }
+        }else if(checked < 0){
+            if(classChecked == "p1"){
+                _modalImg.classList.add("p0");
+                _modalImg.classList.remove("p1");
+                _modalImg.classList.remove("p2");
+            }else if(classChecked == "p2"){
+                _modalImg.classList.add("p1");
+                _modalImg.classList.remove("p0");
+                _modalImg.classList.remove("p2");
+            }
+
+        }
         controllEv(ev);
     })
-
-
 
     _modalOpenBt.addEventListener("click",()=>{
             _popMovie.classList.add("open");

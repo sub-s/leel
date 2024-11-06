@@ -167,6 +167,23 @@
                         <img src="./img/sub/sub-location.png" alt="location" >
                     </div>
                 </div>
+                <div class="sub2-img-info-box">
+                    <div>
+                        <span class="s">
+                            부산을 대표하는<br />
+                            프리미엄 주거중심지<br />
+                        </span>
+                        <span class="b">
+                            <br />
+                            해운대<br />
+                            센텀시티의 정점<br />
+                        </span>
+                    </div>
+                </div>
+                <div class="sub2-silent-lusury-text-wrapper">
+                    <div class="sub2-silent-lusury-text">
+                    </div>
+                </div>
                 <div class="bottom-txt">
                     <p class="txt1">부산 첫 르엘, 센텀의 정점에 서다</p>
                     <p class="txt2">
@@ -177,8 +194,19 @@
                 <div class="map-area">
                     <img src="./img/sub/map.png" alt="location" >
                 </div>
+                <div class="map-area-pop-btn-wrapper">
+                    <div class="map-area-pop-btn">크게보기</div>
+                </div>
             </div>
 
+        </div>
+    </div>
+    <div class="modal-pop map only-mo">
+        <div class="modal-wrapper">
+            <div class="modal-movie-area">
+                <div class="modal-close"><button class="clsoe-button">영상닫기 X</button></div>
+                <img src="./img/sub/sub2-big-map.jpg" />
+            </div>
         </div>
     </div>
     <!-- // 컨텐츠 영역 -->
@@ -192,7 +220,7 @@
             <a href="#" class="only-mo footer-info">개인정보취급방침</a>
         </div>
         <div class="con">
-            <p>시행위탁자 : (주)백송홀딩스 시행수탁자 : (주)하나자산신탁 시공사 : 롯데건설(주) 분양대행사 : (주)제이앤제이플래닝, 지우알엔씨(주), 마켓리더</p>
+            <p>시행위탁자 : (주)백송홀딩스 시행수탁자 : (주)하나자산신탁 시공사 : 롯데건설(주) 분양대행사 : (주)제이앤제이플래닝, 지우알엔씨(주), (주)마켓리더</p>
             <p>
                 홈페이지에 포함된 모든 CG 및 이미지, 그림, 내용 등은 소비자의 이해를 돕기 위해 일부 개발 예정 자료이거나<br>
                 시행까지 개략적으로 표현 및 설명한 것으로 실제와 다를 수 있으며, 사업진행 및 인·허가 과정에서 변경될 수 있습니다.<br>
@@ -253,6 +281,37 @@
         document.querySelector(".rnb-close-btn").addEventListener("click",()=>{
             document.querySelector("#rnb").classList.remove("open");
         })
+
+        const _subimgBox = document.querySelector(".centum-box2 .img-box");
+        _subimgBox.addEventListener("scroll",(ev)=>{
+            const _this = ev.currentTarget;
+            const sl = _this.scrollLeft;
+            const _imgs = _this.querySelectorAll(".image-container");
+            let checkIndex = -1;
+            for(let i=0; i<=_imgs.length - 1; i++){
+                const img = _imgs[i];
+                const scrollLeft = Number(img.getBoundingClientRect().left);
+                if(224 > scrollLeft && 5 < scrollLeft){
+                    checkIndex = i;
+                    const html = img.querySelector(".sub2-hidden-img-box-text").innerHTML;
+                    document.querySelector(".sub2-img-info-box div").innerHTML = html;
+                    break;
+                }
+            }
+        })
+
+        document.querySelector(".map-area-pop-btn").addEventListener("click",()=>{
+            document.querySelector(".modal-pop.map").classList.add("open")
+        })
+        document.querySelector(".clsoe-button").addEventListener("click",()=>{
+            document.querySelector(".modal-pop.map").classList.remove("open")
+        })
+        document.querySelectorAll(".top-bottom").forEach((bt,idx)=>{
+            bt.addEventListener("click",()=>{
+                document.querySelector("html").scrollTop = 0;
+            });
+        })
+
     });
 </script>
 </body>
