@@ -52,6 +52,7 @@ window.onload = function(){
                 break;
             }
         }
+        alert(ev.target.tagName,":",checked)
         if(checked < 0){
             if(classChecked == "p0"){
                 _modalImg.classList.add("p1");
@@ -72,16 +73,15 @@ window.onload = function(){
                 _modalImg.classList.remove("p0");
                 _modalImg.classList.remove("p2");
             }
-
         }else if(ev.target.tagName === "AREA"){
+            alert("link")
             document.querySelector(".rnb-inner .rnb-list > li:nth-child(4) a").click();
         }
     })
 
     _modalOpenBt.addEventListener("click",()=>{
-        console.log("dkdkdkdkdkdkkdk")
-            _popMovie.classList.add("open");
-            document.querySelector(".modal-video").play();
+        _popMovie.classList.add("open");
+        document.querySelector(".modal-video").play();
     })
 
     _rnbMenu.addEventListener("click",()=>{
