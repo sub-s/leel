@@ -52,7 +52,7 @@ window.onload = function(){
                 break;
             }
         }
-        if(checked < 50){
+        if(checked < 0){
             if(classChecked == "p0"){
                 _modalImg.classList.add("p1");
                 _modalImg.classList.remove("p0");
@@ -62,7 +62,7 @@ window.onload = function(){
                 _modalImg.classList.remove("p1");
                 _modalImg.classList.remove("p0");
             }
-        }else if(checked > -50){
+        }else if(checked > 0){
             if(classChecked == "p1"){
                 _modalImg.classList.add("p0");
                 _modalImg.classList.remove("p1");
@@ -73,7 +73,6 @@ window.onload = function(){
                 _modalImg.classList.remove("p2");
             }
         }else if(ev.target.tagName === "AREA"){
-            alert("link")
             document.querySelector(".rnb-inner .rnb-list > li:nth-child(4) a").click();
         }
     })
