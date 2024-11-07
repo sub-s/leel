@@ -186,23 +186,15 @@
 
 
     /* sub2 */
-    .mo-swiper{
-        position:relative;
-        width:calc(100% - 20rem);
-        height:424rem;
-        overflow:hidden;;
-        box-sizing:border-box;
-        padding-left:68rem;
-        padding-right:0rem;
-        margin-top:90rem;
-        margin-left:20rem;
-        margin-right:0;
+    .swiper.mySwiper.only-mo{
+        display:block;
     }
     .mo-swiper-nom{
         position:absolute;
-        left:-11rem;
-        bottom:55rem;
+        left:2rem;
+        bottom:45rem;
         z-index:5;
+        display:block;
         font-size:14rem;
         line-height:21rem;
         color:#d4d4d4;
@@ -213,9 +205,9 @@
     }
     .centum-box2 .img-box{
         position:relative;
-        display:inline-block;
+        /* display:none; */
         width:calc(100% - 20rem);
-        height:424rem;
+        height:100rem;
         margin:0;
         width:auto;
         white-space:nowrap;
@@ -247,7 +239,7 @@
         position:relative;
         width:calc(100% - 40rem);
         height:4rem;
-        margin:0 auto 25rem auto;
+        margin:25rem auto 25rem auto;
         overflow:hidden;
         background:#d6d6d6;
     }
@@ -260,25 +252,25 @@
         transition:left ease 1.5s;
         background:black;
     }
-    .mo-swiper.p0 + .mo-swiper-bar > span{
+    .mo-swiper-bar.p0 > span{
         left:-87.5%;
     }
-    .mo-swiper.p1 + .mo-swiper-bar > span{
+    .mo-swiper-bar.p1 > span{
         left:-75%;
     }
-    .mo-swiper.p2 + .mo-swiper-bar > span{
+    .mo-swiper-bar.p2 > span{
         left:-62.5%;
     }
-    .mo-swiper.p3 + .mo-swiper-bar > span{
+    .mo-swiper-bar.p3 > span{
         left:-50%;
     }
-    .mo-swiper.p4 + .mo-swiper-bar > span{
+    .mo-swiper-bar.p4 > span{
         left:-25%;
     }
-    .mo-swiper.p5 + .mo-swiper-bar > span{
+    .mo-swiper-bar.p5 > span{
         left:-12.5%;
     }
-    .mo-swiper.p6 + .mo-swiper-bar > span{
+    .mo-swiper-bar.p6 > span{
         left:0;
     }
     .centum-box2 .image-container,.centum-box2 .image-container.img1, .centum-box2 .image-container.img2, .centum-box2 .image-container.img3, .centum-box2 .image-container.img4,.centum-box2 .image-container.img5{
@@ -290,6 +282,19 @@
         display:inline-block;
         width:200rem;
         height:385rem;
+    }
+    .centum-box2 .image-container.img1,
+    .centum-box2 .image-container.img2,
+    .centum-box2 .image-container.img3,
+    .centum-box2 .image-container.img4,
+    .centum-box2 .image-container.img5,
+    .centum-box2 .image-container.img6,
+    .centum-box2 .image-container.img7
+    {
+        display:none;
+    }
+    .swiper-both{
+        position:relative;
     }
     .centum-box2 .image-container + .image-container{
         margin-left:22rem;

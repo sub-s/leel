@@ -1,6 +1,9 @@
 .only-mo{
     display:none;
 }
+.swiper.mySwiper.only-mo{
+    display:none;
+}
 
 
 /* */
