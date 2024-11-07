@@ -87,7 +87,7 @@ body{-webkit-text-size-adjust: none;}
 
 /* scrol */
 .web-scroll-icon{
-    position:absolute;
+    position:fixed;
     top:calc(50% + 35rem);
     left:20rem;
     z-index:10;

@@ -186,19 +186,100 @@
 
 
     /* sub2 */
-    .centum-box2 .img-box{
+    .mo-swiper{
+        position:relative;
         width:calc(100% - 20rem);
         height:424rem;
-        padding-left:85rem;
-        padding-right:40rem;
+        overflow:hidden;;
+        box-sizing:border-box;
+        padding-left:68rem;
+        padding-right:0rem;
         margin-top:90rem;
         margin-left:20rem;
         margin-right:0;
-        margin-bottom:25rem;
+    }
+    .mo-swiper-nom{
+        position:absolute;
+        left:-11rem;
+        bottom:55rem;
+        z-index:5;
+        font-size:14rem;
+        line-height:21rem;
+        color:#d4d4d4;
+        transform:rotate(-90deg);
+    }
+    .mo-swiper-nom span{
+        color:#000;
+    }
+    .centum-box2 .img-box{
+        position:relative;
+        display:inline-block;
+        width:calc(100% - 20rem);
+        height:424rem;
+        margin:0;
+        width:auto;
         white-space:nowrap;
         font-size:0;
-        overflow:scroll;
-        box-sizing:border-box;
+        transition:left ease 0.3s;
+    }
+    .mo-swiper.p0 .img-box{
+        left:0rem;
+    }
+    .mo-swiper.p1 .img-box{
+        left:-220rem;
+    }
+    .mo-swiper.p2 .img-box{
+        left:-440rem;
+    }
+    .mo-swiper.p3 .img-box{
+        left:-660rem;
+    }
+    .mo-swiper.p4 .img-box{
+        left:-880rem;
+    }
+    .mo-swiper.p5 .img-box{
+        left:-1100rem;
+    }
+    .mo-swiper.p6 .img-box{
+        left:-1320rem;
+    }
+    .mo-swiper-bar{
+        position:relative;
+        width:calc(100% - 40rem);
+        height:4rem;
+        margin:0 auto 25rem auto;
+        overflow:hidden;
+        background:#d6d6d6;
+    }
+    .mo-swiper-bar > span{
+        position:absolute;
+        top:0;
+        left:-100%;
+        width:100%;
+        height:100%;
+        transition:left ease 1.5s;
+        background:black;
+    }
+    .mo-swiper.p0 + .mo-swiper-bar > span{
+        left:-87.5%;
+    }
+    .mo-swiper.p1 + .mo-swiper-bar > span{
+        left:-75%;
+    }
+    .mo-swiper.p2 + .mo-swiper-bar > span{
+        left:-62.5%;
+    }
+    .mo-swiper.p3 + .mo-swiper-bar > span{
+        left:-50%;
+    }
+    .mo-swiper.p4 + .mo-swiper-bar > span{
+        left:-25%;
+    }
+    .mo-swiper.p5 + .mo-swiper-bar > span{
+        left:-12.5%;
+    }
+    .mo-swiper.p6 + .mo-swiper-bar > span{
+        left:0;
     }
     .centum-box2 .image-container,.centum-box2 .image-container.img1, .centum-box2 .image-container.img2, .centum-box2 .image-container.img3, .centum-box2 .image-container.img4,.centum-box2 .image-container.img5{
         position:relative;
