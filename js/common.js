@@ -1,7 +1,7 @@
 let onePlay = false;
 window.onload = function(){
     const _conWrapper = document.querySelector(".content-wrapper");
-    const _con9 = document.querySelector(".content-area.con9 .innerWrapper");
+    const _lastCon = document.querySelector(".content-area.con10 .innerWrapper");
     const _popMovie = document.querySelector(".modal-pop.movie");
     const _popImg = document.querySelector(".modal-pop.img");
     const _popCloseBtMovie = _popMovie.querySelector(".clsoe-button");
@@ -11,6 +11,7 @@ window.onload = function(){
     const _rnbClose = document.querySelector(".rnb-close-btn");
     const _modalOpenBt = document.querySelector(".web-modal-open");
     const _modalImg = document.querySelector(".modal-pop-img");
+    const _sound = document.querySelector(".icon-sound-coltrol");
     let popupChecked = true;
     let delayTime = false;
     let delayTimer = null;
@@ -34,15 +35,34 @@ window.onload = function(){
             })
         },3000)
     },500)
+    // setCon1();
+    // setCon2();
+    // setCon3();
+    // setCon4();
+    // setCon5();
+    // setCon6();
+    // setCon7();
+    // setCon8();
+    // setCon9();
+    // setCon10();
 
+    _sound.addEventListener("click",()=>{
+        if(_sound.classList.contains("on")){
+            _sound.classList.remove("on");
+            document.querySelector(".modal-video").muted = true;
+        }else{
+            _sound.classList.add("on");
+            document.querySelector(".modal-video").muted = false;
+        }
+    })
     
     _modalImg.addEventListener("touchstart",(ev)=>{
         ev.preventDefault();
-        touchImg = ev.changedTouches[0].screenY;
+        touchImg = Math.floor(ev.changedTouches[0].screenY);
     })
     _modalImg.addEventListener("touchend",(ev)=>{
         ev.preventDefault();
-        const checked = touchImg - ev.changedTouches[0].screenY;
+        const checked = touchImg - Math.floor(ev.changedTouches[0].screenY);
         let classChecked = ""
         for(let i=0;i<3; i++){
             const cl = "p" + i;
@@ -105,12 +125,12 @@ window.onload = function(){
     const scrollEv = (ev)=>{
         // ev.preventDefault();
         const scrollTop = ev.currentTarget.scrollTop;
-        const _firstBooks = _conWrapper.querySelector(".con9 .book-box-wrapper.book1 .book-box");
-        const _books = _conWrapper.querySelectorAll(".con9 .book-box-wrapper.book2 .book-box, .con9 .book-box-wrapper.book3 .book-box");
-        const _texts = _conWrapper.querySelectorAll(".con9 .book-box-wrapper.book2 .book-text-con, .con9 .book-box-wrapper.book3 .book-text-con");
-        const _video = _conWrapper.querySelector(".con9 .beyond-centum-video");
-        const _both = _conWrapper.querySelector(".con9 .beyond-centum-bottom-text");
-        const _bothLogo = _conWrapper.querySelector(".con9 .beyond-centum-bottom-logo");
+        const _firstBooks = _conWrapper.querySelector(".con10 .book-box-wrapper.book1 .book-box");
+        const _books = _conWrapper.querySelectorAll(".con10 .book-box-wrapper.book2 .book-box, .con10 .book-box-wrapper.book3 .book-box");
+        const _texts = _conWrapper.querySelectorAll(".con10 .book-box-wrapper.book2 .book-text-con, .con10 .book-box-wrapper.book3 .book-text-con");
+        const _video = _conWrapper.querySelector(".con10 .beyond-centum-video");
+        const _both = _conWrapper.querySelector(".con10 .beyond-centum-bottom-text");
+        const _bothLogo = _conWrapper.querySelector(".con10 .beyond-centum-bottom-logo");
         const wt = window.innerHeight;
         const firstBookTop = _firstBooks.getBoundingClientRect().top;
         const bothTop = _both.getBoundingClientRect().top;
@@ -144,12 +164,12 @@ window.onload = function(){
             document.querySelector(".beyond-centum-video video").play()
         }
     }
-    _con9.addEventListener("scroll",(ev)=>{
+    _lastCon.addEventListener("scroll",(ev)=>{
         scrollEv(ev);
     })
     const controllEv = (ev)=>{
         _rnb.classList.remove("open");
-        if(delayTime || checkedNum > 1){
+        if(delayTime){
             return;
         }
         delayTime = true;
@@ -159,7 +179,7 @@ window.onload = function(){
         checkedEvent = true;
         touchChecked = 0;
         if(dy > 0){
-            if(checked !== "w10") event.preventDefault();
+            if(checked !== "w11") event.preventDefault();
             if(checked == null){
                 setCon1();
                 // if(!ev.deltaY) setCon2();
@@ -179,13 +199,15 @@ window.onload = function(){
                 setCon9();
             }else if(checked == "w9"){
                 setCon10();
+            }else if(checked == "w10"){
+                setCon11();
             }else{
                 checkedEvent = false;
                 delayTime = false;
                 checkedNum = 0;
             }
         }else if(dy < 0){
-            if(checked !== "w10" || _con9.scrollTop <= 0){
+            if(checked !== "w11" || _lastCon.scrollTop <= 0){
                 event.preventDefault();
             }
             if(checked == "w1"){
@@ -209,15 +231,17 @@ window.onload = function(){
                 resetCon8();
             }else if(checked == "w9"){
                 resetCon9();
-            }else if(checked == "w10" && _con9.scrollTop <= 0){
+            }else if(checked == "w10"){
                 resetCon10();
+            }else if(checked == "w11" && _lastCon.scrollTop <= 0){
+                resetCon11();
             }else{
                 checkedEvent = false;
                 delayTime = false;
                 checkedNum = 0;
             }
         }
-        if(!checkedEvent) return;
+        // if(!checkedEvent) return;
         if(delayTimer) clearInterval(delayTimer)
         delayTimer = setTimeout(()=>{
             delayTime = false;
@@ -230,12 +254,12 @@ window.onload = function(){
             console.log("ev.target : ",ev.target)
         }
         const cl = getCheckedCurrentPosition();
-        if(cl !== "w10") ev.preventDefault();
+        if(cl !== "w11") ev.preventDefault();
         touchChecked = ev.changedTouches[0].screenY;
     })
     _conWrapper.addEventListener("touchend",(ev)=>{
         const cl = getCheckedCurrentPosition();
-        if(cl !== "w10") ev.preventDefault();
+        if(cl !== "w11") ev.preventDefault();
         controllEv(ev);
     })
     _conWrapper.addEventListener("wheel",(ev)=>{
@@ -525,13 +549,8 @@ const setCon10 = ()=>{
     const _conWrapper = document.querySelector(".content-wrapper");
     _conWrapper.classList.add("w10");
     const _movieWrapper = _conWrapper.querySelector(".con9 .movie-box");
-    const _con9 = document.querySelector(".content-area.con9 .innerWrapper");
     setTimeout(()=>{
-        // _movieWrapper.classList.add("active");
         _movieWrapper.querySelector("video").play();
-        const ev = document.createEvent("HTMLEvents");
-        ev.initEvent("scroll",true,true);
-        _con9.dispatchEvent(ev);
     },1500)
 }
 const resetCon10 = ()=>{
@@ -542,28 +561,6 @@ const resetCon10 = ()=>{
         _movieWrapper.classList.remove("active");
         _movieWrapper.querySelector("video").pause();
     },800)
-    const _books = _conWrapper.querySelectorAll(".con9 .book-box-wrapper");
-    const _texts = _conWrapper.querySelectorAll(".con9 .book-box-wrapper .book-text-con");
-    const _con9 = document.querySelector(".content-area.con9 .innerWrapper");
-
-
-    const _both = _conWrapper.querySelector(".con9 .beyond-centum-bottom-text");
-    const _bothLogo = _conWrapper.querySelector(".con9 .beyond-centum-bottom-logo");
-
-    setTimeout(()=>{
-        _books.forEach((_b,idx)=>{
-            _b.classList.remove("active");
-        })
-        _texts.forEach((_b,idx)=>{
-            _b.classList.remove("active");
-        })
-        _con9.scrollTop = 0;
-        onePlay = false;
-        document.querySelector(".beyond-centum-bottom-text-wrapper").classList.remove("active");
-        _both.classList.remove("active");
-        _bothLogo.classList.remove("active");
-    },800)
-    document.querySelector(".beyond-centum-video video").pause();
 }
 const setCon11 = ()=>{
     const _conWrapper = document.querySelector(".content-wrapper");
@@ -578,7 +575,7 @@ const resetCon11 = ()=>{
     _conWrapper.classList.remove("w11");
     const _books = _conWrapper.querySelectorAll(".con10 .book-box-wrapper");
     const _texts = _conWrapper.querySelectorAll(".con10 .book-box-wrapper .book-text-con");
-    const _con9 = document.querySelector(".content-area.con10 .innerWrapper");
+    const _lastCon = document.querySelector(".content-area.con10 .innerWrapper");
     setTimeout(()=>{
         _books.forEach((_b,idx)=>{
             _b.classList.remove("active");
@@ -586,9 +583,9 @@ const resetCon11 = ()=>{
         _texts.forEach((_b,idx)=>{
             _b.classList.remove("active");
         })
-        _con9.scrollTop = 0;
+        _lastCon.scrollTop = 0;
         onePlay = false;
-        _con9.querySelector("video").pause();
+        _lastCon.querySelector("video").pause();
     },800)
 }
 

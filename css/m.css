@@ -285,6 +285,9 @@
 }
 
 /* con5 */
+.content-area.con5 > .innerWrapper > .img > .img-wrapper.i1.ani > .image-box{
+    무ㅑㅡㅁ샤ㅐㅜ
+}
 .content-area.con5 > .innerWrapper{
     padding:160rem 40rem 0;
     flex-direction:column;
@@ -555,9 +558,9 @@
     height:100%;
 }
 .con9-top-box{
-    height:auto;
+    /* height:auto;
     padding-top:150rem;
-    padding-bottom:273rem;
+    padding-bottom:273rem; */
 }
 
 /* .book-box{

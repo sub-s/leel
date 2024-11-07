@@ -190,9 +190,19 @@
                         청담, 잠실(예정), 대치, 반포에 이어 드디어 센텀과 만나는 르엘, <br>
                         클래스가 다른 하이엔드 라이프로 센텀의 자부을 완성합니다.
                     </p>
+                    <div class="view">
+                        <p class="txt1">부산 첫 르엘, 센텀의 정점에 서다</p>
+                        <p class="txt2">
+                            청담, 잠실(예정), 대치, 반포에 이어 드디어 센텀과 만나는 르엘, <br>
+                            클래스가 다른 하이엔드 라이프로 센텀의 자부을 완성합니다.
+                        </p>
+                    </div>
                 </div>
                 <div class="map-area">
-                    <img src="./img/sub/map.png" alt="location" >
+                    <div class="map-area-wrapper">
+                        <img src="./img/sub/map.png" alt="location" >
+                        <img src="./img/sub/map.png" alt="location" class="view" >
+                    </div>
                 </div>
                 <div class="map-area-pop-btn-wrapper">
                     <div class="map-area-pop-btn">크게보기</div>
@@ -241,7 +251,7 @@
 </div>
 <script>
     const images = document.querySelectorAll('.image-container img');
-    const txtAnimationElements = document.querySelectorAll('.txt-animation');
+    const txtAnimationElements = document.querySelectorAll('.txt-animation, .centum-box2 .bottom-txt');
 
     window.addEventListener('load', () => {
         let currentImageIndex = 0;
@@ -311,7 +321,14 @@
                 document.querySelector("html").scrollTop = 0;
             });
         })
-
+        window.addEventListener("scroll",(event)=>{
+            const _this = event.currentTarget;
+            const _map = document.querySelector(".map-area-wrapper");
+            const top = _map.getBoundingClientRect().top;
+            if(top < 500){
+                _map.classList.add("show");
+            }
+        })
     });
 </script>
 </body>
