@@ -671,9 +671,11 @@
 .center-content-box > .txt{
     top:45rem;
     line-height:32rem;
+    border:1px solid red;
 }
 .center-content-box > .both{
     bottom:50rem;
+    border:1px solid red;
 }
 
 /* scrol */
