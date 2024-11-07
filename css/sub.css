@@ -48,7 +48,7 @@ body{-webkit-text-size-adjust: none;
     right:0;
     z-index:500;
     width:0;
-    transition:width ease 2s;
+    transition:width ease 1s;
 }
 #rnb.open{
     width:50%;

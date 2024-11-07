@@ -34,24 +34,29 @@ window.onload = function(){
             })
         },3000)
     },500)
+    document.querySelectorAll(".modal-pop-img-dot span").forEach((span,index)=>{
+        span.addEventListener("click",(evnet)=>{
+            const _this = evnet.target;
+            console.log("_this ; ",_this)
+            const _c = _this.parentNode.querySelectorAll("span");
+            const idx = [..._c].indexOf(_this);
+            if(idx === 0){
+                _modalImg.classList.add("p0");
+                _modalImg.classList.remove("p1");
+                _modalImg.classList.remove("p2");
 
-    
-    _modalImg.addEventListener("touchstart",(ev)=>{
-        ev.preventDefault();
-        touchImg = ev.changedTouches[0].screenY;
-    })
-    _modalImg.addEventListener("touchend",(ev)=>{
-        ev.preventDefault();
-        const checked = touchImg - ev.changedTouches[0].screenY;
-        console.log("ev.target : ",ev.target.tagName)
-        let classChecked = ""
-        for(let i=0;i<3; i++){
-            const cl = "p" + i;
-            if(_modalImg.classList.contains(cl)){
-                classChecked = cl;
-                break;
+            }else if(idx === 1){
+                _modalImg.classList.remove("p0");
+                _modalImg.classList.add("p1");
+                _modalImg.classList.remove("p2");
+                
+            }else if(idx === 2){
+                _modalImg.classList.remove("p0");
+                _modalImg.classList.remove("p1");
+                _modalImg.classList.add("p2");
+                
             }
-        }
+
         if(checked < 10){
             if(classChecked == "p0"){
                 _modalImg.classList.add("p1");
@@ -72,11 +77,46 @@ window.onload = function(){
                 _modalImg.classList.remove("p0");
                 _modalImg.classList.remove("p2");
             }
-        }else if(ev.target.tagName === "AREA"){
-            document.querySelector(".rnb-inner .rnb-list > li:nth-child(4) a").click();
         }
-        touchImg = 0;
+        })
     })
+    // _modalImg.addEventListener("touchend",(ev)=>{
+    //     ev.preventDefault();
+    //     const checked = touchImg - ev.changedTouches[0].screenY;
+    //     console.log("ev.target : ",ev.target.tagName)
+    //     let classChecked = ""
+    //     for(let i=0;i<3; i++){
+    //         const cl = "p" + i;
+    //         if(_modalImg.classList.contains(cl)){
+    //             classChecked = cl;
+    //             break;
+    //         }
+    //     }
+    //     if(checked < 10){
+    //         if(classChecked == "p0"){
+    //             _modalImg.classList.add("p1");
+    //             _modalImg.classList.remove("p0");
+    //             _modalImg.classList.remove("p2");
+    //         }else if(classChecked == "p1"){
+    //             _modalImg.classList.add("p2");
+    //             _modalImg.classList.remove("p1");
+    //             _modalImg.classList.remove("p0");
+    //         }
+    //     }else if(checked > -10){
+    //         if(classChecked == "p1"){
+    //             _modalImg.classList.add("p0");
+    //             _modalImg.classList.remove("p1");
+    //             _modalImg.classList.remove("p2");
+    //         }else if(classChecked == "p2"){
+    //             _modalImg.classList.add("p1");
+    //             _modalImg.classList.remove("p0");
+    //             _modalImg.classList.remove("p2");
+    //         }
+    //     }else if(ev.target.tagName === "AREA"){
+    //         document.querySelector(".rnb-inner .rnb-list > li:nth-child(4) a").click();
+    //     }
+    //     touchImg = 0;
+    // })
 
     _modalOpenBt.addEventListener("click",()=>{
         _popMovie.classList.add("open");
