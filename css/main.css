@@ -2285,6 +2285,7 @@ body{-webkit-text-size-adjust: none;}
     outline:none;
     cursor:pointer;
     background:#000 url(../img/icon-sount-off.png) no-repeat center;
+    background-size:24rem 20rem;
 }
 
 
