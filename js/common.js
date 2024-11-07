@@ -52,7 +52,6 @@ window.onload = function(){
                 break;
             }
         }
-        alert(ev.target.tagName,":",checked)
         if(checked < 0){
             if(classChecked == "p0"){
                 _modalImg.classList.add("p1");
