@@ -43,6 +43,7 @@ window.onload = function(){
     _modalImg.addEventListener("touchend",(ev)=>{
         ev.preventDefault();
         const checked = touchImg - ev.changedTouches[0].screenY;
+        console.log("ev.target : ",ev.target.tagName)
         let classChecked = ""
         for(let i=0;i<3; i++){
             const cl = "p" + i;
@@ -72,6 +73,8 @@ window.onload = function(){
                 _modalImg.classList.remove("p2");
             }
 
+        }else if(ev.target.tagName === "AREA"){
+            document.querySelector(".rnb-inner .rnb-list > li:nth-child(4) a").click();
         }
     })
 

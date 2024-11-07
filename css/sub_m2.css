@@ -74,12 +74,14 @@
     .sub-footer > .con > p:first-child{
         font-size:11rem;
         line-height:15rem;
-        padding:0 5rem;
+        padding:0 20rem;
+        text-align:left;
     }
     .sub-footer > .con > p:nth-child(2){
         padding:20rem 20rem 0;
         font-size:10rem;
         line-height:15rem;
+        text-align:left;
     }
     .sub-footer > .con > p:last-child{
         padding:30rem 20rem 0;

@@ -779,11 +779,13 @@
 #footer > .con > p:first-child{
     font-size:22rem;
     line-height:30rem;
+    text-align:left;
 }
 #footer > .con > p:nth-child(2){
     padding-top:45rem;
     font-size:21rem;
     line-height:30rem;
+    text-align:left;
 }
 #footer > .con > p:last-child{
     padding-top:50rem;
